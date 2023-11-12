@@ -1,0 +1,32 @@
+@base_url = https://localhost:7253/api
+
+# ALUGUEL ######################################
+
+### Registro de um novo aluguel
+POST {{base_url}}/aluguel/registrar
+Content-Type: application/json
+
+{
+    "dataInicio": "2023-11-12",
+    "dataTermino": "2023-11-15",
+    "diasAlugados": 4,
+    "clienteId": 1,
+    "carroId": 1
+}
+
+
+### Alteração de um aluguel
+PUT {{base_url}}/aluguel/alterar/1
+Content-Type: application/json
+
+{
+    "dataInicio": "2023-11-13",
+    "dataTermino": "2023-11-16",
+    "diasAlugados": 5
+}
+
+### Obtenção de todos os alugueis
+GET {{base_url}}/aluguel/listar
+
+### Exclusão de um aluguel
+DELETE {{base_url}}/aluguel/excluir/1

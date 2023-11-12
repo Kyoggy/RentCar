@@ -1,0 +1,27 @@
+@base_url = https://localhost:7253/api
+
+# CLIENTE ######################################
+
+### Criação de um novo cliente
+POST {{base_url}}/cliente/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Diogo",
+    "cpf" : "12345678914"
+}
+
+### Alteração de um cliente
+POST {{base_url}}/cliente/alterar/1
+Content-Type: application/json
+
+{
+    "nome": "Pedro"
+}
+
+### Obtenção de todos os clientes
+GET {{base_url}}/cliente/listar
+
+
+### Exclusão de um cliente
+GET {{base_url}}/cliente/deletar/1

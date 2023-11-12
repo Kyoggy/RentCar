@@ -1,0 +1,34 @@
+@base_url = https://localhost:7253/api
+
+# CARRO ######################################
+
+### Criação de um novo carro
+POST {{base_url}}/carro/cadastrar
+Content-Type: application/json
+
+{
+    "valorDia": 100.00,
+    "unidadesDisponiveis": 5,
+    "modelo": "Gol",
+    "unidadesTotais": 10
+}
+
+### Alteração de um carro
+PUT {{base_url}}/carro/alterar/1
+Content-Type: application/json
+
+{
+    "valorDia": 120.00,
+    "unidadesDisponiveis": 3,
+    "modelo": "Argo",
+    "unidadesTotais": 8
+}
+
+### Obtenção de todos os carros
+GET {{base_url}}/carro/listar
+
+### Busca de um carro por modelo
+GET {{base_url}}/carro/buscar/Carro Modelo X
+
+### Exclusão de um carro
+DELETE {{base_url}}/carro/deletar/1
